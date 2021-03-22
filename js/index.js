@@ -81,7 +81,7 @@ function circleCircumference(circle) {
 class Shark extends Animal {
 constructor(name, age, status) {
 super(name, age, 0, "shark", status);
-}
+ }
 }
 
 class Cat extends Animal {
@@ -90,7 +90,7 @@ super(name, age, 4, "cat", status);
 }
 introduce() {
 return super.introduce() + '  Meow meow!';
-}
+ }
 }
 
 class Dog extends Animal {
@@ -100,5 +100,15 @@ this.master = master;
 }
 greetMaster() {
 return `Hello ${this.master}` ;
+ }
 }
-}
+
+//https://www.codewars.com/kata/training-js-number-12-loop-statement-for-dot-in-and-for-dot-of/train/javascript
+function giveMeFive(obj) {
+  let arr = [];
+    for (let key in obj) {
+      if (key.length == 5) arr.push(key);
+      if (obj[key].length == 5 ) arr.push(obj[key]);
+    }
+    return arr;
+    }
