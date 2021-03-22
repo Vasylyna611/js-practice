@@ -57,3 +57,48 @@ function firstNonConsecutive (arr) {
     }
   }
 }
+
+//22.03
+//https://www.codewars.com/kata/55a2d7ebe362935a210000b2
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    let min = args[0]
+    
+    for(let i = 0; i < args.length; i++) {
+      let value = args[i]
+      min = (value < min) ? value : min
+    }
+    return min
+  }
+}
+
+//https://www.codewars.com/kata/58e43389acfd3e81d5000a88
+function circleCircumference(circle) {
+  return 2 * Math.PI * circle.radius;
+}
+
+//https://www.codewars.com/kata/56f935002e6c0d55fa000d92
+class Shark extends Animal {
+constructor(name, age, status) {
+super(name, age, 0, "shark", status);
+}
+}
+
+class Cat extends Animal {
+constructor(name, age, status) {
+super(name, age, 4, "cat", status);
+}
+introduce() {
+return super.introduce() + '  Meow meow!';
+}
+}
+
+class Dog extends Animal {
+constructor(name, age, status, master) {
+super(name, age, 4, "dog", status);
+this.master = master;
+}
+greetMaster() {
+return `Hello ${this.master}` ;
+}
+}
